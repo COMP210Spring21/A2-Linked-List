@@ -1,34 +1,36 @@
-import list.List;
+package a4;
+
+import a4.list.List;
 
 public class ListAlgorithms {
 
     // Novice
 
     /**
-     * Return the number of nodes in list. If the list is empty return 0.
+     * Return the number of nodes in a4.list. If the a4.list is empty return 0.
      *
-     * ex: list: A -> B -> C -> D
+     * ex: a4.list: A -> B -> C -> D
      *     return: 4
      *
      * @param list
-     * @return the number of nodes in the list
+     * @return the number of nodes in the a4.list
      */
     public static int size(List list) {
         return -1;
     }
 
     /**
-     * Given a linked list, return the list with the node at index i removed.
+     * Given a linked a4.list, return the a4.list with the node at index i removed.
      * Note that the first element is at index 0
-     * If i is larger than the size of the list, throw an IndexOutOfBounds Exception
+     * If i is larger than the size of the a4.list, throw an IndexOutOfBounds Exception
      *
-     * ex: list: A -> B -> C -> D
+     * ex: a4.list: A -> B -> C -> D
      *     i: 1
      *     return: A -> C -> D
      *
      * @param list
      * @param i    - index of node to remove
-     * @return the list with the node removed
+     * @return the a4.list with the node removed
      */
     public static List removeAtIndex(List list, int i) {
         return null;
@@ -57,15 +59,15 @@ public class ListAlgorithms {
     // Adept
 
     /**
-     * Return true if the list is symmetrical, false otherwise
-     * ex: list: 1 -> 2 ->3 -> 2 -> 1
+     * Return true if the a4.list is symmetrical, false otherwise
+     * ex: a4.list: 1 -> 2 ->3 -> 2 -> 1
      *     return: true
      *
-     *     list: a -> b -> c -> b -> f
+     *     a4.list: a -> b -> c -> b -> f
      *     return: false
      *
      * @param list
-     * @return true if the list is symmetrical, false otherwise
+     * @return true if the a4.list is symmetrical, false otherwise
      */
 
     public static boolean isSymmetrical(List list) {
@@ -74,28 +76,28 @@ public class ListAlgorithms {
 
 
     /**
-     * Stretch the list so that each element in the list is represented factor times
-     * If the factor is 0, return an empty list;
-     * ex: list: 1 -> 2 ->3
+     * Stretch the a4.list so that each element in the a4.list is represented factor times
+     * If the factor is 0, return an empty a4.list;
+     * ex: a4.list: 1 -> 2 ->3
      *     factor: 3
      *     return: 1 -> 1 -> 1 -> 2 -> 2 -> 2 -> 3 -> 3 -> 3
      *
      * @param list
      * @param factor the amount to multiply the number of occurrences of each element by
-     * @return the modified list
+     * @return the modified a4.list
      */
     public static List multiply(List list, int factor) {
         return null;
     }
 
     /**
-     * Given a sorted linked list, remove the duplicate values from the list
-     * and return the modified list sorted.
-     * ex: list: 5 -> 6 -> 7 -> 7 -> 7 -> 8 -> 8 -> 9
+     * Given a sorted linked a4.list, remove the duplicate values from the a4.list
+     * and return the modified a4.list sorted.
+     * ex: a4.list: 5 -> 6 -> 7 -> 7 -> 7 -> 8 -> 8 -> 9
      *     return: 5 -> 6 -> 7 -> 8 -> 9
      *
      * @param list - a sorted linked
-     * @return a sorted linked list with repeated values removed
+     * @return a sorted linked a4.list with repeated values removed
      */
     public static List removeRepeats(List list) {
         return null;
@@ -105,27 +107,27 @@ public class ListAlgorithms {
 
 
     /**
-     * Given a list, return that list reversed.
+     * Given a a4.list, return that a4.list reversed.
      *
-     * ex list:  10 -> 9 -> 8 -> 7
+     * ex a4.list:  10 -> 9 -> 8 -> 7
      *    return: 7 -> 8 -> 9 -> 10
      * @param list
-     * @return the reversed list
+     * @return the reversed a4.list
      */
     public static List reverse(List list) { return null; }
     /**
-     * Return true if the list contains a cycle, false otherwise
-     * ex: list: 1 -> 2 -> 3 - > 4 --       (4 points to 2)
+     * Return true if the a4.list contains a cycle, false otherwise
+     * ex: a4.list: 1 -> 2 -> 3 - > 4 --       (4 points to 2)
      *                ^              |
      *                |              |
      *                ---------------
      *      return: true
      *
-     *      list: 1 -> 2 -> 3 -> 4
+     *      a4.list: 1 -> 2 -> 3 -> 4
      *      return: false
      *
      * @param list
-     * @return true if the list contains a cycle, false otherwise
+     * @return true if the a4.list contains a cycle, false otherwise
      */
     public static boolean containsCycle(List list) {
         return false;
@@ -136,7 +138,7 @@ public class ListAlgorithms {
      * list1 will be longer than list2. The examples below show how to handle
      * each case.
      *
-     * Note: Do NOT create and return a new list, merge the second list into the first one.
+     * Note: Do NOT create and return a new a4.list, merge the second a4.list into the first one.
      *
      * ex: list1: 1 -> 2 -> 3
      *     list2: 4 -> 5 -> 6
@@ -148,7 +150,7 @@ public class ListAlgorithms {
      *
      * @param list1
      * @param list2
-     * @return the merged list
+     * @return the merged a4.list
      */
     public static List merge(List list1, List list2) {
         return null;

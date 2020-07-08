@@ -1,6 +1,6 @@
-import list.LinkedList;
-import list.List;
-import solution.ListAlgorithms;
+package a4;
+import a4.list.*;
+
 
 
 public class Main {

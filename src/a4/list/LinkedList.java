@@ -1,4 +1,4 @@
-package list;
+package a4.list;
 
 
 public class LinkedList<T> implements  List{

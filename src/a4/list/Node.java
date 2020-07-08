@@ -1,4 +1,4 @@
-package list;
+package a4.list;
 
 public interface Node<T> {
 
