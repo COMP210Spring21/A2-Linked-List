@@ -1,7 +1,5 @@
 package a4;
 
-import a4.list.List;
-
 public class ListAlgorithms {
 
     // Novice

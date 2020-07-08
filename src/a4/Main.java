@@ -1,6 +1,4 @@
 package a4;
-import a4.list.*;
-
 
 
 public class Main {

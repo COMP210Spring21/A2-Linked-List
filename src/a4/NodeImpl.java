@@ -1,4 +1,4 @@
-package a4.list;
+package a4;
 
 public class NodeImpl<T> implements Node<T> {
 
