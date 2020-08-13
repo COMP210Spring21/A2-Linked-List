@@ -1,15 +1,19 @@
-# A4-Linked-List
+# Linked List
 
-In this assignment your task is to complete a series of algorithms using Linked Lists. 
-The tasks are divided into 3 parts, Novice, Adept, and Jedi that increase in difficulty.
-Explanations of each expected output are provided above each method definition in ListAlgorithms.java.
-An example of the input and expected output is also provided. For these algorithms you should NOT be creating a new list and returning it, you should only be manipulating the lists passed in as parameters. 
+In this assignment your task is to complete a series of algorithms using linked lists. 
+The method signatures and their explanations that you need to 
+ implement are provided at the top of LinkedList.java. The algorithms increase
+in difficulty as you go down the page. An example of the input and expected output is also provided. 
+For these algorithms you should NOT be creating a new list and returning it, you should only be manipulating the list object
+that the method is called on (the object that this represents). 
 
 The a4 package also contains the code for an implementation of a
-Linked List. The NodeImpl class is how we represent a Node that makes up the
-List and the LinkedList class implements all the methods of a List that are defined in List.java. Look over and understand the contents of List.java, LinkedList.java, Node.java, and NodeImpl.java before starting 
-on the algorithms' solutions. 
+Linked List. The Node class is how we represent a Node that makes up the
+List and the LinkedList class implements all the methods of a List that are defined in List.java. The full implementation of
+the List methods are provided at the bottom of LinkedList.java. You should not be changing any of the completed methods, only 
+edit the first 8 methods at the top of the file. 
+Look over and understand the contents of this package before starting 
+on the algorithm solutions. 
 
-An example of how to test your code is provided in Main.java. Since all the methods in ListAlgorithms
-are static, they can be called by writing ListAlgorithms.methodName(). A toString method is provided
-in LinkedList.java to display the contents of the list. 
+An example of how to test your code is provided in Main.java.  A toString method is provided
+in LinkedList.java to display the contents of the list.

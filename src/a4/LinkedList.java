@@ -1,10 +1,142 @@
 package a4;
 
 
-public class LinkedList<T> implements  List{
+
+public class LinkedList<T> implements List {
     private Node<T> head = null;
     private Node<T> tail = null;
     private int size = 0;
+
+
+    /**
+     * Given a linked list, return the list with the node at index i removed.
+     * Note that the first element is at index 0
+     * If i is larger than the size of the list, throw an IndexOutOfBounds Exception
+     *
+     * ex: list: A -> B -> C -> D
+     *     i: 1
+     *     return: A -> C -> D
+     *
+     * @param i    - index of node to remove
+     * @return the list with the node removed
+     */
+    public List removeAtIndex(int i) {
+        return null;
+    }
+
+    /**
+     * Return true if this linked list is equal to the list argument, false otherwise.
+     * Two lists are equal if they have the same size, and the same
+     * elements in the same order.
+     * ex:  list: 1 -> 4 -> 2
+     *      list2: 1 -> 4 -> 2
+     *      return: true
+     *
+     *      list: 1 -> 5
+     *      list2: 2 -> 5
+     *      return false;
+     *
+     * @param list2 - the list to merge into the current list
+     * @return true if the lists have the same elements in the same order, false othewise
+     */
+    public boolean isEqual(List list2) {
+        return false;
+    }
+
+
+    /**
+     * Return true if the list is symmetrical, false otherwise
+     * ex: list: 1 -> 2 -> 3 -> 2 -> 1
+     *     return: true
+     *
+     *     list: a -> b -> c -> b -> f
+     *     return: false
+     *
+     * @return true if the list is symmetrical, false otherwise
+     */
+
+    public boolean isSymmetrical() {
+        return false;
+    }
+
+
+    /**
+     * Stretch the list so that each element in the list is represented factor times
+     * If the factor is 0, return an empty list;
+     * ex: list: 1 -> 2 ->3
+     *     factor: 3
+     *     return: 1 -> 1 -> 1 -> 2 -> 2 -> 2 -> 3 -> 3 -> 3
+     *
+     * @param factor the amount to multiply the number of occurrences of each element by
+     * @return the modified list
+     */
+    public List multiply(int factor) {
+        return null;
+    }
+
+    /**
+     * Given a sorted linked list, remove the duplicate values from the list
+     * and return the modified list sorted.
+     * ex: list: 5 -> 6 -> 7 -> 7 -> 7 -> 8 -> 8 -> 9
+     *     return: 5 -> 6 -> 7 -> 8 -> 9
+     *
+     * @return a sorted linked list with repeated values removed
+     */
+    public List removeRepeats() { return null; }
+
+
+    /**
+     * Reverse and return the list
+     *
+     * ex list:  10 -> 9 -> 8 -> 7
+     *    return: 7 -> 8 -> 9 -> 10
+     * @return the reversed list
+     */
+    public List reverse() { return null; }
+
+    /**
+     * Return true if the list contains a cycle, false otherwise
+     * ex: list: 1 -> 2 -> 3 - > 4 --       (4 points to 2)
+     *                ^              |
+     *                |              |
+     *                ---------------
+     *      return: true
+     *
+     *      list: 1 -> 2 -> 3 -> 4
+     *      return: false
+     *
+     * @return true if the list contains a cycle, false otherwise
+     */
+    public boolean containsCycle() {
+        return false;
+    }
+
+    /**
+     * Merge the given linked list into the current list. The 2 lists will always be
+     * either the same size, or the current list will be longer than list2.
+     * The examples below show how to handle each case.
+     *
+     * Note: Do NOT create and return a new list, merge the second list into the first one.
+     *
+     * ex: list: 1 -> 2 -> 3
+     *     list2: 4 -> 5 -> 6
+     *     return: 1 -> 4 -> 2 -> 5 -> 3 -> 6
+     *
+     *     list: 1 -> 2 -> 3 -> 4
+     *     list2: 5 -> 6
+     *     return 1 -> 5 -> 2 -> 6 -> 3 -> 4
+     *
+     * @param list2
+     * @return the merged list
+     */
+    public List merge(List list2) {
+        return null;
+    }
+
+
+    /*
+    Linked List implementation below
+     */
 
     @Override
     public int size() {
@@ -35,9 +167,11 @@ public class LinkedList<T> implements  List{
         return false;
     }
 
+
+
     @Override
     public T[] toArray() {
-        T[] arr =  (T[]) new Object[size];
+        T[] arr =  (T[]) new Object[size()];
         Node<T> current = head;
         int i = 0;
         if(isEmpty()) {
@@ -50,6 +184,7 @@ public class LinkedList<T> implements  List{
         }
         return arr;
     }
+
 
     @Override
     public void add(Object element) {
@@ -164,7 +299,6 @@ public class LinkedList<T> implements  List{
     }
 
 
-
     @Override
     public int indexOf(Object element) {
         Node<T> current = head;
@@ -193,6 +327,9 @@ public class LinkedList<T> implements  List{
         }
         return index;
     }
+
+
+
     @Override
     public Node getHead() {
         return head;
@@ -226,6 +363,7 @@ public class LinkedList<T> implements  List{
     public Node<T> getTail() {
         return tail;
     }
+
 
 
 }
