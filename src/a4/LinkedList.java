@@ -2,7 +2,7 @@ package a4;
 
 
 
-public class LinkedList<T> implements List {
+public class LinkedList<T> {
     private Node<T> head = null;
     private Node<T> tail = null;
     private int size = 0;
@@ -20,8 +20,7 @@ public class LinkedList<T> implements List {
      * @param i    - index of node to remove
      * @return the list with the node removed
      */
-    public List removeAtIndex(int i) {
-        return null;
+    public void removeAtIndex(int i) {
     }
 
     /**
@@ -70,8 +69,7 @@ public class LinkedList<T> implements List {
      * @param factor the amount to multiply the number of occurrences of each element by
      * @return the modified list
      */
-    public List multiply(int factor) {
-        return null;
+    public void multiply(int factor) {
     }
 
     /**
@@ -82,7 +80,7 @@ public class LinkedList<T> implements List {
      *
      * @return a sorted linked list with repeated values removed
      */
-    public List removeRepeats() { return null; }
+    public removeRepeats() { }
 
 
     /**
@@ -92,7 +90,7 @@ public class LinkedList<T> implements List {
      *    return: 7 -> 8 -> 9 -> 10
      * @return the reversed list
      */
-    public List reverse() { return null; }
+    public reverse() { }
 
     /**
      * Return true if the list contains a cycle, false otherwise
@@ -129,33 +127,26 @@ public class LinkedList<T> implements List {
      * @param list2
      * @return the merged list
      */
-    public List merge(List list2) {
-        return null;
+    public void merge(List list2) {
     }
 
 
-    /*
-    Linked List implementation below
-     */
-
-    @Override
+    /* Implementation given to you. Do not modify below this. */
+    
     public int size() {
         return size;
     }
 
-    @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
-    @Override
     public void clear() {
         head = null;
         tail = null;
         size = 0;
     }
 
-    @Override
     public boolean contains(Object element) {
         Node<T> current = head;
         while(current != null) {
@@ -167,9 +158,6 @@ public class LinkedList<T> implements List {
         return false;
     }
 
-
-
-    @Override
     public T[] toArray() {
         T[] arr =  (T[]) new Object[size()];
         Node<T> current = head;
@@ -185,8 +173,6 @@ public class LinkedList<T> implements List {
         return arr;
     }
 
-
-    @Override
     public void add(Object element) {
         Node<T> newNode = new NodeImpl<T>((T) element, null);
         if(isEmpty()) {
@@ -201,7 +187,6 @@ public class LinkedList<T> implements List {
 
     }
 
-    @Override
     public boolean remove(Object element) {
         Node<T> current = head;
         if(isEmpty()) {
@@ -226,7 +211,6 @@ public class LinkedList<T> implements List {
         return true;
     }
 
-    @Override
     public T get(int index) {
         validIndex(index);
         Node<T> current = head;
@@ -238,7 +222,6 @@ public class LinkedList<T> implements List {
         return current.getValue();
     }
 
-    @Override
     public T set(int index, Object element) {
         validIndex(index);
         Node<T> current = head;
@@ -262,7 +245,6 @@ public class LinkedList<T> implements List {
         return prevValue;
     }
 
-    @Override
     public void add(int index, Object element) {
         if(index > size) {
             validIndex(index);
@@ -298,8 +280,6 @@ public class LinkedList<T> implements List {
         }
     }
 
-
-    @Override
     public int indexOf(Object element) {
         Node<T> current = head;
         int index = 0;
@@ -313,7 +293,6 @@ public class LinkedList<T> implements List {
         return -1;
     }
 
-    @Override
     public int lastIndexOf(Object element) {
         Node<T> current = head;
         int index = -1;
@@ -328,25 +307,13 @@ public class LinkedList<T> implements List {
         return index;
     }
 
-
-
-    @Override
-    public Node getHead() {
-        return head;
-    }
-
-    @Override
-    public void setHead(Node newHead) {
-        this.head = newHead;
-    }
-
-
     public void validIndex(int i) {
         if(i < 0 || i >= size) {
             throw new IndexOutOfBoundsException("Invalid index");
         }
     }
 
+    @Override
     public String toString() {
         String list = "";
         Node<T> current = head;
@@ -359,11 +326,4 @@ public class LinkedList<T> implements List {
         }
         return list;
     }
-
-    public Node<T> getTail() {
-        return tail;
-    }
-
-
-
 }
