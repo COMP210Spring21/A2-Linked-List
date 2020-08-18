@@ -9,16 +9,15 @@ public class LinkedList<T> {
 
 
     /**
-     * Given a linked list, return the list with the node at index i removed.
+     * Remove the node at index i of the list.
      * Note that the first element is at index 0
      * If i is larger than the size of the list, throw an IndexOutOfBounds Exception
      *
      * ex: list: A -> B -> C -> D
      *     i: 1
-     *     return: A -> C -> D
+     *     list after removeAtIndex: A -> C -> D
      *
      * @param i    - index of node to remove
-     * @return the list with the node removed
      */
     public void removeAtIndex(int i) {
     }
@@ -36,9 +35,9 @@ public class LinkedList<T> {
      *      return false;
      *
      * @param list2 - the list to merge into the current list
-     * @return true if the lists have the same elements in the same order, false othewise
+     * @return true if the lists have the same elements in the same order, false otherwise
      */
-    public boolean isEqual(List list2) {
+    public boolean isEqual(LinkedList list2) {
         return false;
     }
 
@@ -61,36 +60,33 @@ public class LinkedList<T> {
 
     /**
      * Stretch the list so that each element in the list is represented factor times
-     * If the factor is 0, return an empty list;
+     * If the factor is 0 the list should be cleared (have 0 nodes)
      * ex: list: 1 -> 2 ->3
      *     factor: 3
-     *     return: 1 -> 1 -> 1 -> 2 -> 2 -> 2 -> 3 -> 3 -> 3
+     *     list after multiply: 1 -> 1 -> 1 -> 2 -> 2 -> 2 -> 3 -> 3 -> 3
      *
      * @param factor the amount to multiply the number of occurrences of each element by
-     * @return the modified list
      */
     public void multiply(int factor) {
     }
 
     /**
      * Given a sorted linked list, remove the duplicate values from the list
-     * and return the modified list sorted.
      * ex: list: 5 -> 6 -> 7 -> 7 -> 7 -> 8 -> 8 -> 9
-     *     return: 5 -> 6 -> 7 -> 8 -> 9
+     *     list after removeRepeats: 5 -> 6 -> 7 -> 8 -> 9
      *
-     * @return a sorted linked list with repeated values removed
      */
-    public removeRepeats() { }
+    public void removeRepeats() { }
 
 
     /**
-     * Reverse and return the list
+     * Reverse the list
      *
      * ex list:  10 -> 9 -> 8 -> 7
-     *    return: 7 -> 8 -> 9 -> 10
-     * @return the reversed list
+     *    list after reverse: 7 -> 8 -> 9 -> 10
+     *
      */
-    public reverse() { }
+    public void reverse() { }
 
     /**
      * Return true if the list contains a cycle, false otherwise
@@ -125,9 +121,8 @@ public class LinkedList<T> {
      *     return 1 -> 5 -> 2 -> 6 -> 3 -> 4
      *
      * @param list2
-     * @return the merged list
      */
-    public void merge(List list2) {
+    public void merge(LinkedList list2) {
     }
 
 
