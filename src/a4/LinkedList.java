@@ -308,6 +308,10 @@ public class LinkedList<T> {
         }
     }
 
+    public Node<T> getHead() {
+        return head;
+    }
+
     @Override
     public String toString() {
         String list = "";
@@ -321,4 +325,5 @@ public class LinkedList<T> {
         }
         return list;
     }
+
 }
