@@ -9,8 +9,8 @@ that the method is called on (the object that this represents).
 
 The a4 package also contains the code for an implementation of a
 Linked List. The Node class is how we represent a Node that makes up the
-List and the LinkedList class implements all the methods of a List that are defined in List.java. The full implementation of
-the List methods are provided at the bottom of LinkedList.java. You should not be changing any of the completed methods, only 
+List and the LinkedList class has a full implementation of
+the a LinkedList. You should not be changing any of the completed methods, only 
 edit the first 8 methods at the top of the file. 
 Look over and understand the contents of this package before starting 
 on the algorithm solutions. 
