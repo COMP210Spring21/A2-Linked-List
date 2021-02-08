@@ -1,10 +1,8 @@
-package a4;
+package a2;
 
-
-
-public class LinkedList<T> {
-    private Node<T> head = null;
-    private Node<T> tail = null;
+public class LinkedList {
+    private Node head = null;
+    private Node tail = null;
     private int size = 0;
 
 
@@ -13,9 +11,9 @@ public class LinkedList<T> {
      * Note that the first element is at index 0
      * If i is larger than the size of the list, throw an IndexOutOfBounds Exception
      *
-     * ex: list: A -> B -> C -> D
+     * ex: list: 1 -> 2 -> 3 -> 4
      *     i: 1
-     *     list after removeAtIndex: A -> C -> D
+     *     list after removeAtIndex: 1 -> 3 -> 4
      *
      * @param i    - index of node to remove
      */
@@ -34,20 +32,26 @@ public class LinkedList<T> {
      *      list2: 2 -> 5
      *      return false;
      *
-     * @param list2 - the list to merge into the current list
      * @return true if the lists have the same elements in the same order, false otherwise
      */
     public boolean isEqual(LinkedList list2) {
         return false;
     }
 
+    /**
+     * Remove all the nodes at odd indices from the list. Remember that the first Node is at index 0
+     *
+     * ex: list: 1 -> 3 -> 4 -> 2 -> 8
+     *     list after removeOdds: 1 -> 4 -> 8
+     */
+    public void removeOdds() { }
 
     /**
      * Return true if the list is symmetrical, false otherwise
      * ex: list: 1 -> 2 -> 3 -> 2 -> 1
      *     return: true
      *
-     *     list: a -> b -> c -> b -> f
+     *     list: 1 -> 2 -> 3 -> 4 -> 5
      *     return: false
      *
      * @return true if the list is symmetrical, false otherwise
@@ -61,14 +65,13 @@ public class LinkedList<T> {
     /**
      * Stretch the list so that each element in the list is represented factor times
      * If the factor is 0 the list should be cleared (have 0 nodes)
-     * ex: list: 1 -> 2 ->3
+     * ex: list: 1 -> 2 -> 3
      *     factor: 3
      *     list after multiply: 1 -> 1 -> 1 -> 2 -> 2 -> 2 -> 3 -> 3 -> 3
      *
      * @param factor the amount to multiply the number of occurrences of each element by
      */
-    public void multiply(int factor) {
-    }
+    public void multiply(int factor) { }
 
     /**
      * Given a sorted linked list, remove the duplicate values from the list
@@ -78,15 +81,18 @@ public class LinkedList<T> {
      */
     public void removeRepeats() { }
 
-
     /**
-     * Reverse the list
+     * Swap the nodes at index1 and index2 in the linked list.
+     * ex" list: 1 -> 3 -> 4 -> 2 -> 8
+     *     index1: 0
+     *     index2: 3
+     *     list after swap: 2 -> 3 -> 4 -> 1 -> 8
      *
-     * ex list:  10 -> 9 -> 8 -> 7
-     *    list after reverse: 7 -> 8 -> 9 -> 10
-     *
+     * @param index1
+     * @param index2
      */
-    public void reverse() { }
+    public void swap(int index1, int index2) { }
+
 
     /**
      * Return true if the list contains a cycle, false otherwise
@@ -122,12 +128,11 @@ public class LinkedList<T> {
      *
      * @param list2
      */
-    public void merge(LinkedList list2) {
-    }
+    public void merge(LinkedList list2) { }
 
 
     /* Implementation given to you. Do not modify below this. */
-    
+
     public int size() {
         return size;
     }
@@ -142,10 +147,13 @@ public class LinkedList<T> {
         size = 0;
     }
 
-    public boolean contains(Object element) {
-        Node<T> current = head;
+    /*
+    Returns true if the list contains a node whose value matches the element parameter, false otherwise
+     */
+    public boolean contains(int element) {
+        Node current = head;
         while(current != null) {
-            if(current.getValue().equals(element)) {
+            if(current.getValue() == element) {
                 return true;
             }
             current = current.getNext();
@@ -153,9 +161,12 @@ public class LinkedList<T> {
         return false;
     }
 
-    public T[] toArray() {
-        T[] arr =  (T[]) new Object[size()];
-        Node<T> current = head;
+    /*
+    converts the linked list into an array
+     */
+    public int[] toArray() {
+        int[] arr =  new int[size()];
+        Node current = head;
         int i = 0;
         if(isEmpty()) {
             return arr;
@@ -168,8 +179,11 @@ public class LinkedList<T> {
         return arr;
     }
 
-    public void add(Object element) {
-        Node<T> newNode = new NodeImpl<T>((T) element, null);
+    /*
+    adds a node to the end of the list
+     */
+    public void add(int element) {
+        Node newNode = new NodeImpl(element, null);
         if(isEmpty()) {
             head = newNode;
             tail = newNode;
@@ -182,8 +196,11 @@ public class LinkedList<T> {
 
     }
 
-    public boolean remove(Object element) {
-        Node<T> current = head;
+    /*
+    removes the element from the list
+     */
+    public boolean remove(int element) {
+        Node current = head;
         if(isEmpty()) {
             return false;
         }
@@ -206,9 +223,12 @@ public class LinkedList<T> {
         return true;
     }
 
-    public T get(int index) {
+    /*
+        returns the value at the index parameter.
+     */
+    public int get(int index) {
         validIndex(index);
-        Node<T> current = head;
+        Node current = head;
         int i = 0;
         while (i < index) {
             current = current.getNext();
@@ -217,19 +237,22 @@ public class LinkedList<T> {
         return current.getValue();
     }
 
-    public T set(int index, Object element) {
+    /*
+    sets the value of the node at index to the element
+     */
+    public int set(int index, int element) {
         validIndex(index);
-        Node<T> current = head;
-        T prevValue = null;
+        Node current = head;
+        int prevValue = 1;
         int i = 0;
         if(index == 0) {
             prevValue = head.getValue();
-            head.setValue((T) element);
+            head.setValue(element);
         } else {
             while(current != null) {
                 if(i == index) {
                     prevValue = current.getValue();
-                    current.setValue((T) element);
+                    current.setValue(element);
                     return prevValue;
                 }
                 current = current.getNext();
@@ -240,18 +263,21 @@ public class LinkedList<T> {
         return prevValue;
     }
 
-    public void add(int index, Object element) {
+    /*
+    adds a node at the given index with the given element as its value
+     */
+    public void add(int index, int element) {
         if(index > size) {
             validIndex(index);
         }
-        Node<T> current = head;
+        Node current = head;
         int i = 0;
         if(index == 0) {
             if(isEmpty()) {
                 add(element);
                 return;
             } else {
-                Node<T> newNode = new NodeImpl<T>((T) element, head);
+                Node newNode = new NodeImpl(element, head);
                 head = newNode;
                 size++;
                 return;
@@ -263,8 +289,8 @@ public class LinkedList<T> {
         }
         while(current != null) {
             if(i == (index - 1)) {
-                Node<T> temp = current.getNext();
-                Node<T> newNode = new NodeImpl<T>((T) element, temp);
+                Node temp = current.getNext();
+                Node newNode = new NodeImpl(element, temp);
                 current.setNext(newNode);
                 size++;
                 return;
@@ -275,11 +301,14 @@ public class LinkedList<T> {
         }
     }
 
-    public int indexOf(Object element) {
-        Node<T> current = head;
+    /*
+    returns the index of the given element
+     */
+    public int indexOf(int element) {
+        Node current = head;
         int index = 0;
         while(current != null) {
-            if(current.getValue().equals((T) element)) {
+            if(current.getValue() == element) {
                 return index;
             }
             index++;
@@ -288,12 +317,15 @@ public class LinkedList<T> {
         return -1;
     }
 
-    public int lastIndexOf(Object element) {
-        Node<T> current = head;
+    /*
+    returns the last index of the element
+     */
+    public int lastIndexOf(int element) {
+        Node current = head;
         int index = -1;
         int i = 0;
         while(current != null) {
-            if(current.getValue().equals ((T) element)) {
+            if(current.getValue() == element) {
                 index = i;
             }
             i++;
@@ -308,14 +340,14 @@ public class LinkedList<T> {
         }
     }
 
-    public Node<T> getHead() {
+    public Node getHead() {
         return head;
     }
 
-    @Override
+    /* prints out list */
     public String toString() {
         String list = "";
-        Node<T> current = head;
+        Node current = head;
         while(current != null) {
             if(current.getNext() == null)
                 list+= current.getValue();

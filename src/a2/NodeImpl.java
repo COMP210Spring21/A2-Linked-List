@@ -1,4 +1,4 @@
-package a4;
+package a2;
 
 public class NodeImpl<T> implements Node<T> {
 
