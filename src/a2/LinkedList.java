@@ -61,6 +61,11 @@ public class LinkedList {
         return false;
     }
 
+    /**
+     * Compute and return the average of all the numbers in the linked list
+     * @return a double that is the mean of the list.
+     */
+    public double mean() { return -1.0; }
 
     /**
      * Stretch the list so that each element in the list is represented factor times
@@ -74,24 +79,23 @@ public class LinkedList {
     public void multiply(int factor) { }
 
     /**
+     * Reverse the list
+     *
+     * ex list:  10 -> 9 -> 8 -> 7
+     *    list after reverse: 7 -> 8 -> 9 -> 10
+     *
+     */
+    public void reverse() {
+
+    }
+
+    /**
      * Given a sorted linked list, remove the duplicate values from the list
      * ex: list: 5 -> 6 -> 7 -> 7 -> 7 -> 8 -> 8 -> 9
      *     list after removeRepeats: 5 -> 6 -> 7 -> 8 -> 9
      *
      */
     public void removeRepeats() { }
-
-    /**
-     * Swap the nodes at index1 and index2 in the linked list.
-     * ex" list: 1 -> 3 -> 4 -> 2 -> 8
-     *     index1: 0
-     *     index2: 3
-     *     list after swap: 2 -> 3 -> 4 -> 1 -> 8
-     *
-     * @param index1
-     * @param index2
-     */
-    public void swap(int index1, int index2) { }
 
 
     /**
