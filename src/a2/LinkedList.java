@@ -21,6 +21,12 @@ public class LinkedList {
     }
 
     /**
+     * Compute and return the average of all the numbers in the linked list
+     * @return a double that is the mean of the list.
+     */
+    public double mean() { return -1.0; }
+
+    /**
      * Return true if this linked list is equal to the list argument, false otherwise.
      * Two lists are equal if they have the same size, and the same
      * elements in the same order.
@@ -61,11 +67,6 @@ public class LinkedList {
         return false;
     }
 
-    /**
-     * Compute and return the average of all the numbers in the linked list
-     * @return a double that is the mean of the list.
-     */
-    public double mean() { return -1.0; }
 
     /**
      * Stretch the list so that each element in the list is represented factor times
