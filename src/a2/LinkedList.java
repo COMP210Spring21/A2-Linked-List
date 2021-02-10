@@ -21,10 +21,10 @@ public class LinkedList {
     }
 
     /**
-     * Compute and return the average of all the numbers in the linked list
-     * @return a double that is the mean of the list.
+     * Compute and return the average of all the numbers in the linked list rounded down to the nearest integer
+     * @return an int that is the floor of the mean of the list.
      */
-    public double mean() { return -1.0; }
+    public int mean() { return -1; }
 
     /**
      * Return true if this linked list is equal to the list argument, false otherwise.
