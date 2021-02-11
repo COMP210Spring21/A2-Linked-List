@@ -11,7 +11,7 @@ The a2 package also contains the code for an implementation of a
 Linked List. The Node class is how we represent a Node that makes up the
 List and the LinkedList class has a full implementation of
 the LinkedList. You should not be changing any of the completed methods at the bottom, only 
-edit the first 8 methods at the top of the file. 
+edit the first 10 methods at the top of the file. 
 Look over and understand the contents of this package before starting 
 on the algorithm solutions. 
 
